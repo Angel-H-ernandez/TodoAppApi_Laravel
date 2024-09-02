@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Group_task;
 use Illuminate\Support\Facades\Validator; //to validate request
 class group_taskController extends Controller
+
+//php artisan make:migration nombre_de_tu_migracion
+//php artisan migrate
+//php artisan make:model TaskAgendaMod
+//php artisan make:controller ProductoController
+
 {
     public function index(Request $request){
 

@@ -3,8 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\group_taskController;
+use App\Http\Controllers\TaskAgendaController;
 
-//sing in / sing up___________________________________
+//sing in / sing up___________________________________tengoGITHUB1
 Route::post('signin', function(){
     return 'Sign in / sign up';
 });
@@ -62,3 +63,12 @@ Route::post('update-status-completed', function(){
 Route::get('list-tasks-completed', function(){
     return 'List tasks completed';
 });
+
+//AGENDA_______________________________________
+Route::post('/new-task-agenda', [TaskAgendaController::class, 'store']);
+
+Route::get('/get-task-agenda/{id}', [TaskAgendaController::class, 'show']);
+
+Route::delete('/delete-task-agenda/{id}', [TaskAgendaController::class, 'destroy']);
+
+Route::put('/update-task-agenda/{id}', [TaskAgendaController::class, 'update']);
